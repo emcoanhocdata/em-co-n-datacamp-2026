@@ -1,0 +1,298 @@
+<html style="margin:0;padding:0;">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+(function(){
+  var s = document.createElement('style');
+  s.textContent = ':root{--bg:#faf9f4;--card:#ffffff;--text:#0f172a;--muted:#64748b;--accent:#297a2e;--accent-soft:rgba(41,122,46,.14);--accent2:#d97706;--accent2-soft:rgba(217,119,6,.14);--accent3:#0d8a7d;--accent3-soft:rgba(13,138,125,.14);--accent4:#ba3b5b;--accent4-soft:rgba(186,59,91,.12);--border:rgba(15,23,42,.08)}'
+    +'.reveal{opacity:0;transform:translateY(20px);animation:fadeUp .6s ease forwards}'
+    +'.reveal:nth-child(2){animation-delay:.08s}.reveal:nth-child(3){animation-delay:.16s}.reveal:nth-child(4){animation-delay:.24s}.reveal:nth-child(5){animation-delay:.32s}.reveal:nth-child(6){animation-delay:.4s}'
+    +'@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}'
+    +'.metric-card{transition:transform .2s ease,box-shadow .2s ease}.metric-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.08)}'
+    +'.week-card{transition:border-color .2s ease,box-shadow .2s ease}.week-card:hover{box-shadow:0 4px 20px rgba(41,122,46,.1)}'
+    +'.session-row{transition:background .15s ease;border-radius:8px;padding:10px 12px;cursor:pointer;user-select:none}'
+    +'.session-row:hover{background:rgba(41,122,46,.05)}'
+    +'.session-row.done .session-title{text-decoration:line-through;color:var(--muted)}'
+    +'.session-row.done .session-meta{color:var(--muted)}'
+    +'.chk{width:20px;height:20px;border:2px solid var(--border);border-radius:6px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s ease;background:#fff}'
+    +'.session-row.done .chk{background:var(--accent);border-color:var(--accent)}'
+    +'.phase-bar{height:8px;border-radius:4px;background:rgba(128,128,128,.08);overflow:hidden}'
+    +'.phase-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));transition:width .4s ease}'
+    +'.tab-btn{padding:8px 16px;border-radius:10px;font-weight:500;font-size:13px;cursor:pointer;transition:all .2s ease;color:var(--muted);border:1px solid var(--border);background:var(--card)}'
+    +'.tab-btn.active{color:var(--text);background:var(--accent-soft);border-color:var(--accent)}';
+  document.head.appendChild(s);
+})();
+</script>
+<div style="background-color:transparent;box-sizing:border-box;">
+  <div style="color:var(--text);font-family:'Fredoka',sans-serif;background:radial-gradient(900px 400px at 85% -5%, var(--accent-soft), transparent 60%), var(--bg);">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+
+      <!-- HERO -->
+      <div class="reveal mb-10">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+          <div style="width:48px;height:48px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <p style="font-family:monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin:0;">Lộ trình 14 tuần · DataCamp · Hết năm 2026</p>
+            <h1 class="text-3xl md:text-4xl font-bold" style="color:var(--text);letter-spacing:-0.02em;line-height:1.15;margin:4px 0 0;">Kế hoạch DataCamp 14 tuần — đến tận cuối năm</h1>
+          </div>
+        </div>
+        <p style="color:var(--muted);max-width:640px;line-height:1.7;" class="text-base mt-3">3 buổi/tuần (T3 · T5 · T7), mỗi buổi 2–3 tiếng = <strong>~105h</strong>. Đủ để hoàn thành trọn vẹn SQL + Power BI (gần full track) + Python pandas + Thống kê & A/B testing, kèm nhiều project cho portfolio. Tick từng buổi để theo dõi — trạng thái được lưu tự động.</p>
+      </div>
+
+      <!-- METRICS -->
+      <div class="reveal flex flex-wrap gap-4 mb-10">
+        <div class="metric-card rounded-2xl p-5" style="flex:1 1 150px;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06)">
+          <div style="color:var(--muted)" class="text-xs uppercase tracking-wide font-medium mb-1">Tổng giờ học</div>
+          <div style="color:var(--text)" class="text-3xl font-bold">~105h</div>
+          <div class="text-xs mt-1" style="color:var(--muted)">42 buổi × 2.5h</div>
+        </div>
+        <div class="metric-card rounded-2xl p-5" style="flex:1 1 150px;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06)">
+          <div style="color:var(--muted)" class="text-xs uppercase tracking-wide font-medium mb-1">Khóa học</div>
+          <div style="color:var(--text)" class="text-3xl font-bold">20+</div>
+          <div class="text-xs mt-1" style="color:var(--muted)">SQL · Power BI · Python · Stats</div>
+        </div>
+        <div class="metric-card rounded-2xl p-5" style="flex:1 1 150px;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06)">
+          <div style="color:var(--muted)" class="text-xs uppercase tracking-wide font-medium mb-1">Projects</div>
+          <div style="color:var(--text)" class="text-3xl font-bold">5+</div>
+          <div class="text-xs mt-1" style="color:var(--muted)">SQL · Power BI · Python · Capstone</div>
+        </div>
+        <div class="metric-card rounded-2xl p-5" style="flex:1 1 150px;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06)">
+          <div style="color:var(--muted)" class="text-xs uppercase tracking-wide font-medium mb-1">Thời gian</div>
+          <div style="color:var(--text)" class="text-3xl font-bold">14 tuần</div>
+          <div class="text-xs mt-1" style="color:var(--muted)">29/09/2026 → 03/01/2027</div>
+        </div>
+        <div class="metric-card rounded-2xl p-5" style="flex:1 1 150px;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06)">
+          <div style="color:var(--muted)" class="text-xs uppercase tracking-wide font-medium mb-1">Tiến độ</div>
+          <div style="color:var(--text)" class="text-3xl font-bold" id="progressPct">0%</div>
+          <div class="text-xs mt-1" style="color:var(--muted)"><span id="progressCount">0</span>/42 buổi</div>
+        </div>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="reveal rounded-2xl p-6 mb-8" style="background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <span class="font-semibold text-sm" style="color:var(--text)">Tiến độ tổng thể</span>
+          <button id="resetBtn" style="font-size:12px;color:var(--muted);background:none;border:none;cursor:pointer;text-decoration:underline;">Đặt lại</button>
+        </div>
+        <div class="phase-bar"><div class="phase-fill" id="progressBar" style="width:0%"></div></div>
+      </div>
+
+      <!-- PHASE FILTER -->
+      <div class="reveal mb-6">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;" id="filterTabs">
+          <button class="tab-btn active" data-filter="all">Tất cả (14)</button>
+          <button class="tab-btn" data-filter="sql">GĐ1 · SQL Mastery (Tuần 1–4)</button>
+          <button class="tab-btn" data-filter="pbi">GĐ2 · Power BI (Tuần 5–9)</button>
+          <button class="tab-btn" data-filter="py">GĐ3 · Python (Tuần 10–12)</button>
+          <button class="tab-btn" data-filter="cap">GĐ4 · Stats + Capstone (Tuần 13–14)</button>
+        </div>
+      </div>
+
+      <!-- PHASE LEGEND -->
+      <div class="reveal flex flex-wrap gap-4 mb-8 text-xs" style="color:var(--muted)">
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:3px;background:var(--accent);display:inline-block;"></span>SQL</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:3px;background:var(--accent2);display:inline-block;"></span>Power BI</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:3px;background:var(--accent3);display:inline-block;"></span>Python</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:3px;background:var(--accent4);display:inline-block;"></span>Thống kê / Capstone</span>
+      </div>
+
+      <!-- WEEKS CONTAINER -->
+      <div class="reveal mb-8">
+        <div id="weeksContainer" class="space-y-5"></div>
+      </div>
+
+      <!-- HOLIDAY NOTE -->
+      <div class="reveal rounded-2xl p-6 mb-8" style="background:var(--accent2-soft);border:1px solid var(--accent2);">
+        <h3 class="font-bold text-base mb-3" style="color:var(--text)">Lưu ý đặc biệt: Tuần 13–14 rơi vào Giáng sinh & Tết Dương lịch</h3>
+        <p class="text-sm" style="color:var(--text);line-height:1.7;margin:0 0 8px;">Tuần 13 (22–27/12) và Tuần 14 (29/12–03/01) là dịp lễ — nếu bận đi chơi, họp mặt gia đình, bạn được phép <strong>giảm xuống 2 buổi/tuần</strong> hoặc áp dụng quy tắc 30 phút. Phần A/B Testing in Python và Capstone có thể dồn sang đầu năm 2027 nếu cần (DataCamp của bạn còn đến đâu thì học đến đó).</p>
+        <p class="text-sm" style="color:var(--text);line-height:1.7;margin:0;">Nếu đi trước lịch từ sớm, bạn có thể hoàn thành sớm và dùng thời gian cuối năm để <strong>làm thêm project / polish portfolio</strong> thay vì học khóa mới.</p>
+      </div>
+
+      <!-- RULES -->
+      <div class="reveal rounded-2xl p-6 mb-8" style="background:var(--accent-soft);border:1px solid var(--accent);">
+        <h3 class="font-bold text-base mb-3" style="color:var(--text)">Quy tắc linh hoạt (theo SMART-F)</h3>
+        <ul class="text-sm space-y-2" style="color:var(--text);line-height:1.6;padding-left:0;list-style:none;margin:0;">
+          <li style="display:flex;gap:8px;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">+</span><span><strong>Quy tắc 30 phút:</strong> Mệt quá → chỉ cần 1–2 bài tập nhỏ (~30 phút) để giữ mạch. Số giờ thiếu cộng dồn cuối tuần.</span></li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">+</span><span><strong>Đổi buổi được:</strong> T3 bận → chuyển T4 hoặc sáng CN. Miễn đủ 3 buổi/tuần (2 buổi vào tuần lễ).</span></li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">+</span><span><strong>Mục tiêu mỗi khóa:</strong> 100% completion + pass hết exercises + đạt "Proficient" ở Signal Test.</span></li>
+          <li style="display:flex;gap:8px;"><span style="color:var(--accent);font-weight:700;flex-shrink:0;">+</span><span><strong>Ưu tiên nếu trễ lịch:</strong> SQL & Power BI trước. Python nâng cao (Joining pandas, Matplotlib) và A/B Testing có thể bỏ hoặc dồn sau.</span></li>
+        </ul>
+      </div>
+
+      <div class="mt-10 pt-6 text-center" style="border-top:1px solid var(--border)">
+        <p class="text-xs" style="color:var(--muted)">Thời lượng tham khảo từ DataCamp chính thức · Bắt đầu 29/09/2026 · Kết thúc dự kiến 03/01/2027 · Excel học bên ngoài không lặp lại</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var P = {sql:'var(--accent)', pbi:'var(--accent2)', py:'var(--accent3)', cap:'var(--accent4)'};
+  var PS = {sql:'var(--accent-soft)', pbi:'var(--accent2-soft)', py:'var(--accent3-soft)', cap:'var(--accent4-soft)'};
+  var weeks = [
+    {num:1, phase:'sql', title:"SQL Foundation", date:"29/09 – 04/10", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Introduction to SQL — Chương 1–2", meta:"2h · SELECT, WHERE, so sánh, pattern matching"},
+      {day:"T5", title:"Introduction to SQL — Ch.3–4 (HOÀN THÀNH) + Joining Data in SQL Ch.1", meta:"2.5h · aggregate, GROUP BY, HAVING"},
+      {day:"T7", title:"Joining Data in SQL — Chương 2–4 (HOÀN THÀNH)", meta:"2.5h · INNER/LEFT/FULL JOIN, self-join, subquery"}
+    ]},
+    {num:2, phase:'sql', title:"Intermediate SQL", date:"06/10 – 11/10", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Intermediate SQL — Chương 1–2", meta:"2h · CASE WHEN, lọc nâng cao, nested queries"},
+      {day:"T5", title:"Intermediate SQL — Ch.3–4 (HOÀN THÀNH) + PostgreSQL Summary Stats Ch.1", meta:"2.5h · phân loại & tổng hợp dữ liệu phức tạp"},
+      {day:"T7", title:"PostgreSQL Summary Stats & Window Functions — Ch.2–4 (HOÀN THÀNH)", meta:"2.5h · RANK, ROW_NUMBER, LAG/LEAD, window frames"}
+    ]},
+    {num:3, phase:'sql', title:"SQL Advanced + Project #1", date:"13/10 – 18/10", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Functions for Manipulating Data in PostgreSQL — Ch.1–3", meta:"2.5h · string, date/time, array functions"},
+      {day:"T5", title:"Functions for Manipulating Data — Ch.4 (HOÀN THÀNH SQL TRACK!) + Bắt đầu Project SQL #1", meta:"2.5h · Project: Analyzing International Debt Statistics"},
+      {day:"T7", title:"Hoàn thành Project SQL #1 + Bắt đầu Project #2", meta:"2.5h · Project: When Was the Golden Age of Video Games?"}
+    ]},
+    {num:4, phase:'sql', title:"SQL Projects + Tổng kết", date:"20/10 – 25/10", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Hoàn thành Project SQL #2 + Project #3 (Analyzing Business Metrics)", meta:"2.5h · luyện query trên dữ liệu business thực tế"},
+      {day:"T5", title:"Signal Test SQL (mục tiêu Proficient) + Review notes", meta:"2.5h · ôn lại window functions & JOINs khó"},
+      {day:"T7", title:"Luyện thêm SQL (Assessments / tự viết query phức tạp) + Nghỉ ngơi", meta:"2.5h · chuẩn bị chuyển sang Power BI"}
+    ]},
+    {num:5, phase:'pbi', title:"Power BI Foundation", date:"27/10 – 01/11", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Understanding Data Visualization (2h, no code) + Intro to Power BI Ch.1", meta:"2.5h · nguyên tắc chọn chart + làm quen giao diện"},
+      {day:"T5", title:"Introduction to Power BI — Chương 2–3", meta:"2.5h · load data, Power Query cơ bản, tạo visual đầu tiên"},
+      {day:"T7", title:"Introduction to Power BI — Ch.4 (HOÀN THÀNH) + Data Preparation in Power BI Ch.1", meta:"2.5h · publish report + bắt đầu Power Query chuyên sâu"}
+    ]},
+    {num:6, phase:'pbi', title:"Power Query + Data Modeling", date:"03/11 – 08/11", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Data Preparation in Power BI — Ch.2–3 (HOÀN THÀNH)", meta:"2.5h · cleaning, merging, shaping dữ liệu trong Power Query"},
+      {day:"T5", title:"Data Modeling in Power BI — HOÀN THÀNH", meta:"2.5h · relationships, cardinality, star schema"},
+      {day:"T7", title:"Introduction to DAX in Power BI — Chương 1–2", meta:"2.5h · calculated columns, measures cơ bản, context"}
+    ]},
+    {num:7, phase:'pbi', title:"DAX + Report Design", date:"10/11 – 15/11", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Introduction to DAX — Ch.3 (HOÀN THÀNH) + Report Design in Power BI Ch.1", meta:"2.5h · DAX nâng cao + nguyên tắc thiết kế report"},
+      {day:"T5", title:"Report Design / Data Visualization in Power BI — HOÀN THÀNH", meta:"2.5h · dashboard layout, drill-through, tooltip, bookmark"},
+      {day:"T7", title:"DAX Functions in Power BI (nâng cao) — Chương 1–2", meta:"2.5h · CALCULATE, FILTER, ALL, time intelligence cơ bản"}
+    ]},
+    {num:8, phase:'pbi', title:"Power BI Advanced + Project", date:"17/11 – 22/11", hours:"~7.5h", sessions:[
+      {day:"T3", title:"DAX Functions — Ch.3 (HOÀN THÀNH) + Trend Analysis in Power BI Ch.1", meta:"2.5h · YoY, MoM, moving average trong DAX"},
+      {day:"T5", title:"Trend Analysis in Power BI — HOÀN THÀNH + Bắt đầu Power BI Project", meta:"2.5h · bắt đầu build dashboard hoàn chỉnh từ dataset thực"},
+      {day:"T7", title:"Tiếp tục Power BI Project (build dashboard + DAX measures)", meta:"2.5h · tự thiết kế layout, chọn chart, viết insight"}
+    ]},
+    {num:9, phase:'pbi', title:"Power BI Project + Signal Test", date:"24/11 – 29/11", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Hoàn thành Power BI Project + Publish lên Power BI Service", meta:"2.5h · hoàn thiện dashboard, thêm tooltip & drill-through"},
+      {day:"T5", title:"Signal Test Power BI (mục tiêu Proficient) + Intermediate Data Modeling Ch.1–2", meta:"2.5h · kiểm tra năng lực + học modeling nâng cao"},
+      {day:"T7", title:"Intermediate Data Modeling — HOÀN THÀNH + Introduction to Statistics Ch.1", meta:"2.5h · bắt đầu giai đoạn thống kê"}
+    ]},
+    {num:10, phase:'py', title:"Statistics + Python Basics", date:"01/12 – 06/12", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Introduction to Statistics — Ch.2–4 (HOÀN THÀNH)", meta:"2.5h · phân phối, xác suất, correlation, hypothesis testing cơ bản"},
+      {day:"T5", title:"Introduction to Python — Chương 1–2", meta:"2.5h · variables, lists, functions, numpy cơ bản"},
+      {day:"T7", title:"Introduction to Python — Chương 3–4 (HOÀN THÀNH)", meta:"2.5h · loop, logic, package, matplotlib cơ bản"}
+    ]},
+    {num:11, phase:'py', title:"Intermediate Python + Pandas", date:"08/12 – 13/12", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Intermediate Python — Chương 1–2", meta:"2.5h · Matplotlib, dictionary, pandas cơ bản"},
+      {day:"T5", title:"Intermediate Python — Ch.3–4 (HOÀN THÀNH) + Data Manipulation with pandas Ch.1", meta:"2.5h · loop nâng cao, case study"},
+      {day:"T7", title:"Data Manipulation with pandas — Chương 2–3", meta:"2.5h · filter, groupby, agg, sort, transform"}
+    ]},
+    {num:12, phase:'py', title:"Pandas + Joining + Project", date:"15/12 – 20/12", hours:"~7.5h", sessions:[
+      {day:"T3", title:"Data Manipulation with pandas — Ch.4 (HOÀN THÀNH) + Joining Data with pandas Ch.1", meta:"2.5h · pivot, melt, visualize với pandas"},
+      {day:"T5", title:"Joining Data with pandas — Chương 2–3", meta:"2.5h · merge, concatenate, set_index join"},
+      {day:"T7", title:"Hoàn thành Joining Data with pandas + Bắt đầu Python Project", meta:"2.5h · Project: phân tích dataset thực (vd: NYC taxi / sales data)"}
+    ]},
+    {num:13, phase:'cap', title:"A/B Testing + Hypothesis (Tuần lễ)", date:"22/12 – 27/12", hours:"~6h (2 buổi)", sessions:[
+      {day:"T3", title:"Hoàn thành Python Project + Hypothesis Testing in Python (tốc độ nhanh)", meta:"2.5h · t-test, proportion test, chi-square"},
+      {day:"T5", title:"A/B Testing in Python — Chương 1–2", meta:"2.5h · thiết kế A/B test, sample size, significance"},
+      {day:"T7", title:"(Nghỉ lễ — buổi tùy chọn) A/B Testing Ch.3 hoặc review Python", meta:"tùy chọn · áp dụng quy tắc 30 phút nếu bận"}
+    ]},
+    {num:14, phase:'cap', title:"Capstone + Tổng kết cuối năm (Tết DL)", date:"29/12 – 03/01", hours:"~6h (2 buổi)", sessions:[
+      {day:"T3", title:"A/B Testing in Python — Hoàn thành + Bắt đầu Capstone Project", meta:"2.5h · bắt đầu project tổng hợp 3 công cụ"},
+      {day:"T5", title:"Capstone: SQL query → Python phân tích → Power BI dashboard → viết insight", meta:"2.5h · project cho portfolio ứng tuyển"},
+      {day:"T7", title:"(Nghỉ Tết — buổi tùy chọn) Hoàn thiện Capstone + Review portfolio + Tổng kết năm", meta:"tùy chọn · đánh giá tiến độ, lập kế hoạch 2027"}
+    ]}
+  ];
+
+  var container = document.getElementById('weeksContainer');
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem('dc_progress14') || '{}'); } catch(e){}
+
+  weeks.forEach(function(w, wi){
+    var card = document.createElement('div');
+    card.className = 'week-card rounded-2xl p-5';
+    card.setAttribute('data-phase', w.phase);
+    card.style.cssText = 'background:var(--card);border:1px solid var(--border);border-left:4px solid '+P[w.phase]+';box-shadow:0 1px 3px rgba(0,0,0,.06);';
+    var header = '<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">'
+      + '<div style="width:36px;height:36px;border-radius:10px;background:'+PS[w.phase]+';display:flex;align-items:center;justify-content:center;color:'+P[w.phase]+';font-weight:700;font-size:15px;flex-shrink:0;">'+w.num+'</div>'
+      + '<div style="flex:1;min-width:160px;"><div class="font-bold" style="color:var(--text);font-size:16px;">Tuần '+w.num+' · '+w.title+'</div>'
+      + '<div class="text-xs" style="color:var(--muted);margin-top:2px;">'+w.date+' · '+w.hours+'</div></div>'
+      + '<span class="text-xs font-medium week-pct" data-wi="'+wi+'" style="color:var(--muted);padding:4px 10px;border-radius:20px;background:rgba(128,128,128,.08);">0/3</span>'
+      + '</div>';
+    var rows = '';
+    w.sessions.forEach(function(s, si){
+      var id = 'w'+wi+'s'+si;
+      var done = saved[id] ? 'done' : '';
+      var optional = s.meta.indexOf('tùy chọn') >= 0 ? ' style="opacity:.7;"' : '';
+      rows += '<div class="session-row '+done+'" data-id="'+id+'"'+optional+' style="display:flex;align-items:flex-start;gap:12px;margin-bottom:4px;">'
+        + '<span class="chk">'+(done?'<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>':'')+'</span>'
+        + '<div style="flex:1;min-width:0;"><div class="session-title text-sm font-medium" style="color:var(--text);line-height:1.5;">['+s.day+'] '+s.title+'</div>'
+        + '<div class="session-meta text-xs mt-0.5" style="color:var(--muted);line-height:1.5;">'+s.meta+'</div></div>'
+        + '</div>';
+    });
+    card.innerHTML = header + rows;
+    container.appendChild(card);
+  });
+
+  var totalSessions = 42;
+  function updateProgress(){
+    var done = 0;
+    document.querySelectorAll('.session-row').forEach(function(r){ if(r.classList.contains('done')) done++; });
+    var pct = Math.round(done/totalSessions*100);
+    document.getElementById('progressBar').style.width = pct+'%';
+    document.getElementById('progressPct').textContent = pct+'%';
+    document.getElementById('progressCount').textContent = done;
+    document.querySelectorAll('.week-pct').forEach(function(el){
+      var wi = parseInt(el.getAttribute('data-wi'));
+      var wd = 0;
+      for(var i=0;i<3;i++){ if(saved['w'+wi+'s'+i]) wd++; }
+      el.textContent = wd+'/3';
+    });
+  }
+
+  document.querySelectorAll('.session-row').forEach(function(row){
+    row.addEventListener('click', function(){
+      var id = row.getAttribute('data-id');
+      if(row.classList.contains('done')){
+        row.classList.remove('done');
+        row.querySelector('.chk').innerHTML = '';
+        delete saved[id];
+      } else {
+        row.classList.add('done');
+        row.querySelector('.chk').innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>';
+        saved[id] = true;
+      }
+      try { localStorage.setItem('dc_progress14', JSON.stringify(saved)); } catch(e){}
+      updateProgress();
+    });
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(confirm('Xóa toàn bộ tiến độ đã tick?')){
+      saved = {};
+      try { localStorage.removeItem('dc_progress14'); } catch(e){}
+      document.querySelectorAll('.session-row').forEach(function(r){
+        r.classList.remove('done');
+        r.querySelector('.chk').innerHTML = '';
+      });
+      updateProgress();
+    }
+  });
+
+  // Phase filter
+  document.querySelectorAll('#filterTabs .tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('#filterTabs .tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      document.querySelectorAll('.week-card').forEach(function(card){
+        card.style.display = (f==='all' || card.getAttribute('data-phase')===f) ? '' : 'none';
+      });
+    });
+  });
+
+  updateProgress();
+})();
+</script>
+</html>
